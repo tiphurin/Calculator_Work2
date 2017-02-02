@@ -17,6 +17,7 @@ public class MyCalculator {
 		System.out.println("Enter 4 >> Divide   (/)");
 		System.out.println("Enter 5 >> SqureRoot");
 		System.out.println("Enter 6 >> Power    (^)");
+		System.out.println("Enter 7 >> Mean     ");
 		
 		System.out.print("Please choose function : ");
 		int operator = input.nextInt();
@@ -28,6 +29,16 @@ public class MyCalculator {
 		
 			System.out.print("Enter num2 :");
 			num2 = input.nextDouble();
+		}
+		else if(operator == 7){
+			System.out.print("Enter amount of number :");
+			num1 = input.nextDouble();
+			
+			for(int i=0;i<num1;i++){
+				int y = i+1;
+				System.out.print("Enter num"+y+" :");
+				num2 = num2+input.nextDouble();
+			}
 		}
 		else{
 			System.out.print("Enter num1 :");
@@ -58,6 +69,10 @@ public class MyCalculator {
 		else if(operator == 6){
 			double sum = Math.pow(num1, num2);
 			System.out.println(num1+" ^ "+num2+" = "+sum);
+		}
+		else if(operator == 7){
+			double sum = num2/num1;
+			System.out.println("Mean is "+sum);
 		}
 
 	}
